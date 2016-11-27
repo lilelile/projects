@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+    <action name="register" class="zcdl.RegisterAction">
+        <result name="success">/indexx.jsp</result>
+        <result name="input">/register.jsp</result>
+        <result name="error">/register.jsp</result>
+    </action>
+    <action name="login" class="zcdl.loginAction">
+        <result name="success">/index.jsp</result>
+        <result name="input">/indexx.jsp</result>
+        <result name="error">/indexx.jsp</result>
+     </action>
+     <action name="khtianjia" class="zsg.khtianjia">
+        <result name="success">/khweihu.jsp</result>
+        <result name="input">/khtianjia.jsp</result>
+     </action>
+     <action name="khshanchu" class="zsg.khshanchu">
+        <result name="success">/khweihu.jsp</result>
+        <result name="input">/khshanchu.jsp</result>
+     </action>
+     <action name="khxiugai" class="zsg.khxiugai">
+        <result name="success">/khweihu.jsp</result>
+        <result name="input">/khxiugai.jsp</result>
+     </action>
+     <action name="fhdtianjia" class="zsg.fhdtianjia">
+        <result name="success">/fhdweihu.jsp</result>
+        <result name="input">/fhdtianjia.jsp</result>
+     </action>
+     <action name="fhdshanchu" class="zsg.fhdshanchu">
+        <result name="success">/fhdweihu.jsp</result>
+        <result name="input">/fhdshanchu.jsp</result>
+     </action>
+     <action name="fhdxiugai" class="zsg.fhdxiugai">
+        <result name="success">/fhdweihu.jsp</result>
+        <result name="input">/fhdxiugai.jsp</result>
+     </action>
+     <action name="kdytianjia" class="zsg.kdytianjia">
+        <result name="success">/kdyweihu.jsp</result>
+        <result name="input">/kdytianjia.jsp</result>
+     </action>
+     <action name="kdyshanchu" class="zsg.kdyshanchu">
+        <result name="success">/kdyweihu.jsp</result>
+        <result name="input">/kdyshanchu.jsp</result>
+     </action>
+     <action name="kdyxiugai" class="zsg.kdyxiugai">
+        <result name="success">/kdyweihu.jsp</result>
+        <result name="input">/kdyxiugai.jsp</result>
+     </action>
+    </package>
+</struts>    
