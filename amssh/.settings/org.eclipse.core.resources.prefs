@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//WebRoot/activity/cashier_activity_info.jsp=UTF-8
+encoding//WebRoot/activity/cashier_activity_list.jsp=UTF-8
+encoding//WebRoot/activity/emp_activity_info_canModify.jsp=UTF-8
+encoding//WebRoot/activity/emp_activity_info_readonly.jsp=UTF-8
+encoding//WebRoot/activity/emp_activity_list.jsp=UTF-8
+encoding//WebRoot/activity/emp_add_activity.jsp=UTF-8
+encoding//WebRoot/activity/error.jsp=UTF-8
+encoding//WebRoot/activity/mgr_activity_info.jsp=UTF-8
+encoding//WebRoot/activity/mgr_activity_list.jsp=UTF-8
+encoding//WebRoot/login.jsp=UTF-8
+encoding/<project>=UTF-8

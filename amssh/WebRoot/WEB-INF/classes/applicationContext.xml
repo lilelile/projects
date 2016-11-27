@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+	<bean id="dbutil" class="ams.util.DbUtil">
+		<property name="driverName" value="com.mysql.jdbc.Driver"></property>
+	</bean>
+	<bean id="userdao" class="ams.dao.UserDao">
+	  <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="login" class="ams.action.loginAction">
+		<property name="dao" ref="userdao"></property>
+	</bean>
+	<bean id="showActivity" class="ams.action.ShowActivity">
+		<property name="dao" ref="userdao"></property>
+	</bean>
+	<bean id="activitydao" class="ams.dao.impl.ActivityDaoImpl">
+	 	<property name="sessionFactory" ref="sessionFactory"></property>
+	 	<property name="db" ref="dbutil"></property>
+	</bean>
+	<bean id="approvedao" class="ams.dao.ApproveDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="showActivityDetail" class="ams.action.ShowActivityDetailAction">
+		<property name="dao" ref="activitydao"></property>
+		<property name="adao" ref="approvedao"></property>
+	</bean>
+	<bean id="addactivity" class="ams.action.AddActivityAction">
+		<property name="dao" ref="activitydao"></property>
+	</bean>
+	<bean id="deleteactivity" class="ams.action.DeleteActivityAction">
+		<property name="dao" ref="activitydao"></property>
+	</bean>
+	<bean id="updateactivity" class="ams.action.UpdateActivityAction">
+		<property name="dao" ref="activitydao"></property>
+	</bean>	
+	</beans>

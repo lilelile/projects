@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	
+	<package name="ams" extends="struts-default">
+		<action name="loginAction" class="login">
+			<result name="success">index.jsp</result>
+			<result name="input">login.jsp</result>
+		</action>
+		<action name="ShowActivity" class="showActivity">
+			<result name="success">../activity/emp_activity_list.jsp</result>
+		</action>
+		<action name="ShowActivityDetail" class="showActivityDetail">
+			<result name="success_readonly">../activity/emp_activity_info_readonly.jsp</result>
+			<result name="success_canModify">../activity/emp_activity_info_canModify.jsp</result>
+		</action>
+		<action name="addactivityaction" class="addactivity">
+            <result name="success" type="chain">ShowActivity</result>
+            <result name="input">../activity/emp_add_activity.jsp</result>
+        </action>
+         <action name="deleteactivityaction" class="deleteactivity">
+            <result name="success" type="chain">ShowActivity</result>
+            <result name="input">../activity/emp_activity_list.jsp</result>
+        </action>
+        <action name="updateactivityaction" class="updateactivity">
+        	<result name="success" type="chain">ShowActivity</result>
+        </action>
+        
+	
+		
+	</package>
+
+
+</struts>    

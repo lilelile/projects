@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="ams.po.emp" table="tbl_emp" catalog="ams">
+		<id name="id" type="java.lang.Integer">
+		<column name="id"></column>
+		<generator class="increment"></generator>
+		</id>
+		<property name="uname" type="java.lang.String"></property>
+		<property name="name" type="java.lang.String"></property>
+		<property name="pwd" type="java.lang.String"></property>
+		<property name="salary" type="java.lang.Double"></property>
+		<property name="type" type="java.lang.Integer"></property>	
+		<set name="activities" table="tbl_activity" inverse="true" lazy="true">
+        	<key column="eid"></key>
+        	<one-to-many class="ams.po.activity"/>
+        </set>
+		<set name="approves" table="tbl_approve" inverse="true" lazy="false">
+        	<key column="eid"></key>
+        	<one-to-many class="ams.po.approve"/>
+        </set> 
+ 	</class>
+ 	
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="ams.po.approve" table="tbl_approve" catalog="ams">
+		<id name="id" type="java.lang.Integer">
+		<column name="id"></column>
+		<generator class="increment"></generator>
+		</id>
+		<property name="passed" type="java.lang.Integer"></property>
+		<property name="reason" type="java.lang.String"></property>
+		<property name="app_date" type="java.util.Date"></property>
+	    <many-to-one name="employee" column="eid" class="ams.po.emp" lazy="false"></many-to-one> 
+	    <many-to-one name="activity" column="aid" class="ams.po.activity"></many-to-one>
+ 	</class>
+ 	
+</hibernate-mapping>
