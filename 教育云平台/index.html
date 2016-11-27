@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css"/>
+		<script type="text/javascript" src="easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="js/treeMenu.js"></script>
+		<script type="text/javascript" src="js/show.js"></script>
+		<style type="text/css">
+			.a1{
+				text-decoration: none;
+				display: inherit;
+				height: 80px;
+				width: 80px;
+				text-align: center;
+				line-height: 80px;
+				float: left;
+			}
+			.a1:first-of-type{
+				margin-left: 630px;
+			}
+			.span1{
+				float: left;
+				display: inherit;
+				height: 80px;
+				line-height: 80px;
+			}
+			#treeMenu{
+			padding-left:5px;
+			padding-top:10px;
+		}
+		#a2{
+			background: none;
+			border: none;
+		}
+		</style>
+	</head>
+	<body class="easyui-layout">
+		<div data-options="region:'north'" style="height: 80px;">
+			<img src="img/5.png" style="margin-left: 50px;float: left;"/>
+			<a class="a1" href="#">修改密码</a>
+			<span class="span1">|</span>
+			<a class="a1" href="#">退出</a>
+		</div>
+		<div data-options="title:'导航菜单',region:'west',split:true" style="width: 200px;">
+			<ul id="treeMenu" class="easyui-tree" data-options="url:'tree_data.json',method:'get',dnd:true,
+				 animate:true,onAfterEdit:afterEdit,onContextMenu:contextMenuShow">
+			</ul>
+			<div id="treeContextMenu" class="easyui-menu">
+				<div onclick="append()" data-options="iconCls:'icon-add'">添加菜单</div>
+				<div onclick="edit()" data-options="iconCls:'icon-edit'">编辑菜单</div>
+				<div onclick="removeit()" data-options="iconCls:'icon-remove'">删除菜单</div>
+				<div class="menu-sep"></div>
+				<div onclick="expand()">展开</div>
+				<div onclick="collapse()">折叠</div>
+		    </div>
+		</div>
+		<div data-options="region:'center'" style="width: 100%;">
+			<div id="tabContent" class="easyui-tabs" data-options="fit:true, border:false">
+				<div data-options = "title:'欢迎界面'" style="padding: 10px;" >
+					<iframe src="./welcome.html" frameBorder="0" width="100%"  height="100%" scrolling="no"></iframe>
+				</div>
+
+			</div>
+		</div>
+		
+		<div id="tool" style="background-color: #E8F1FF">
+				
+				<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" id="a2">添加</a>
+				<a href="javascript:editRow()" class="easyui-linkbutton" iconCls="icon-edit" id="a2">修改</a>
+				<a href="javascript:delRow()" class="easyui-linkbutton" iconCls="icon-remove" id="a2">删除</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" id="a2">模板下载</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" id="a2">批量导入</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" id="a2">批量导出</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-reload" id="a2">刷新</a>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<div class="easyui-searchbox" data-options="prompt:'请输入搜索内容',menu:'#searchH'" id="mm">
+			
+				</div>
+				<div id="searchH">
+						<div data-options = "iconCls:'icon-edit'">姓名</div>
+						<div data-options = "iconCls:'icon-cut'">性别</div>
+						<div data-options = "iconCls:'icon-add'">班级</div>
+						<div data-options = "iconCls:'icon-help'">电话 </div>
+				</div>
+		</div>
+	</body>
+</html>
