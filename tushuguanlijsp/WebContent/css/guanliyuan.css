@@ -1,0 +1,180 @@
+
+html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0 none;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+li {
+    list-style: none outside none;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+q:before, q:after {
+    content: "";
+}
+abbr, acronym {
+    border: 0 none;
+    font-variant: normal;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+input, textarea, select {
+}
+legend {
+    color: #;
+}
+body {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+}
+select, input, button, textarea {
+    font: 99% arial,helvetica,clean,sans-serif;
+}
+table {
+    font-size: inherit;
+}
+pre, code, kbd, samp, tt {
+    font-family: monospace;
+    line-height: 100%;
+}
+a {
+    text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+strong {
+    font-weight: bold;
+}
+input[type="submit"] {
+    cursor: pointer;
+}
+button {px;
+    cursor: pointer;
+} 
+      #main{
+		   margin:0px auto;
+		   width:1020px;
+	  }
+    
+	  #body{
+		 text-align:center;
+	     width:1020px;
+		 background:white;
+		 margin:0px auto;
+	  }
+	  #head_top{
+	    background:url("../image/daohang.png");
+	      width:1020px;
+		  height:100px;
+		  margin-bottom:10px;
+	  }
+	  #logo{
+	  float:left;
+	  }
+	  #nav li{
+		  width:100px;
+	      float:left;
+		  text-align:center;
+          line-height: 53px;
+}
+	   }
+	  #nav  a{
+		  font-size:17px;
+		
+		  text-align:center;
+		  
+		  
+	   }
+	  #nav  a:hover{
+	       color:blue;
+	       background:url(../image/daohang1.png); 
+		   display:block;
+		   width:120px;
+		   height:57px;
+      }
+	  #nav a:link{
+		  color:green;
+		  font-family:"楷体"; 
+		  font-size:18px;
+	  }
+	   
+	  #head{
+	      width:1020px;
+		  height:250px;
+		  background:url(../image/0022.jpg);
+		  margin-bottom:10px;
+	  }
+	  #lmain{
+		  
+		  background:url(../image/2.jpg);
+		  line-height:50px;
+	      width:710px;
+		  height:190px;
+		  
+		  float:left;
+		 
+	  }
+	   #lmain ul:tubiao1{
+		   margin-left:10px;
+            margin-top:10px;
+	   }
+	  #rmain{
+	      width:300px;
+		  height:190px;
+		 background:url(../image/4.jpg);
+		  float:left;
+		  margin-left:10px;
+		   line-height:50px;
+		  
+	  }
+	  #rmain li{
+		  display:inline;
+		  margin:0px auto;
+	  }
+	 /*  #rmain li:ke{
+		  display:inline;
+		  margin:0px auto;
+	  } */
+	  #footer{
+		  display:inline;
+	      width:1020px;
+		  height:40px;
+		  background:gray;
+		  float:left;
+		  margin-top:10px;
+		 text-align:center;
+		   line-height:30px;
+	  }
+	  #footer li{
+		  display:inline;
+		  margin:0px auto;
+	  }
+	 
