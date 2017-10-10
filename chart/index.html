@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Chart.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<canvas id="myChart" width="600" height="400"></canvas>
+		<p style="width: 600px;text-align: center;" >下单量</p>
+		<canvas id="myChart2" width="400" height="400"></canvas>
+		<p style="width: 400px;text-align: center;" >下单情况</p>
+	</body>
+</html>
+<script type="text/javascript">
+	var lineChartData = {
+　　　　　　　// x轴的标示
+            labels : ["January","February","March","April","May","June","July","Aug"],
+　　　　　　　// 数据，数组中的每一个object代表一条线
+            datasets : [
+                {
+　　　　　　　　　　　　// 颜色的使用类似于CSS，你也可以使用RGB、HEX或者HSL
+　　　　　　　　　　　　// rgba颜色中最后一个值代表透明度
+　　　　　　　　　　　　// 填充颜色
+                    fillColor : "rgba(220,220,220,0.5)",
+　　　　　　　　　　　　// 线的颜色
+                    strokeColor : "rgba(220,220,220,1)",
+　　　　　　　　　　　　// 点的填充颜色
+                    pointColor : "rgba(220,220,220,1)",
+　　　　　　　　　　　　// 点的边线颜色
+                    pointStrokeColor : "#fff",
+　　　　　　　　　　　　// 与x轴标示对应的数据
+                    data : [65,59,90,81,56,55,40,20]
+                },
+                {
+                    fillColor : "rgba(151,187,205,0.5)",
+                    strokeColor : "rgba(151,187,205,1)",
+                    pointColor : "rgba(151,187,205,1)",
+                    pointStrokeColor : "#fff",
+                    data : [28,48,40,19,96,27,100,80]
+                }
+            ]
+            
+        }
+	var pieData = [
+                {
+                    value: 30,
+                    color:"#F7464A",
+					label: "已完成"
+                },
+                {
+                    value : 50,
+                    color : "#E0E4CC",
+					label: "未完成"
+                }
+            ];
+	//Get context with jQuery - using jQuery's .get() method.
+	var ctx = $("#myChart").get(0).getContext("2d");
+	//This will get the first returned node in the jQuery collection.
+	var myNewChart = new Chart(ctx);
+	myNewChart.Line(lineChartData);
+	//Get context with jQuery - using jQuery's .get() method.
+	var ctx2 = $("#myChart2").get(0).getContext("2d");
+	//This will get the first returned node in the jQuery collection.
+	var myNewChart2 = new Chart(ctx2);
+	myNewChart2.Pie(pieData);
+</script>
